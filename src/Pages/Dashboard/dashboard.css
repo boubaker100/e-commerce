@@ -1,0 +1,61 @@
+.dashboard {
+    min-height: 100vh;
+    background-color: #F7F8FA;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #333;
+    font-weight: 400;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+
+    padding: 0px;
+
+
+}
+
+/* creat progress */
+.create-progress {
+    background-color: #d7d6d6;
+    padding: 2px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0px;
+}
+
+.create-progress .progress-bar {
+    width: 0%;
+    background-color: #4ac5f5;
+    height: 10px;
+    border-radius: 5px;
+    margin-bottom: 0px;
+    transition: width 0.3s ease-in-out;
+    -webkit-transition: width 0.3s ease-in-out;
+    -moz-transition: width 0.3s ease-in-out;
+    -ms-transition: width 0.3s ease-in-out;
+    -o-transition: width 0.3s ease-in-out;
+
+}
+
+.create-progress .progress-bar .progress {
+    background-color: #007bff;
+    height: 10px;
+    border-radius: 10px;
+    transition: width 0.3s ease-in-out;
+}
+
+.create-progress .progress-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+
+.create-progress .progress-info .percentage.completed {
+    color: #28a745;
+}

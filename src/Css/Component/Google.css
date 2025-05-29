@@ -1,0 +1,64 @@
+
+
+.google-btn{
+
+    width: 184px;
+    height:42px ;
+    margin-top:30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.808);
+    background-color: rgba(87, 149, 231, 0.746);
+    text-decoration: none;
+    user-select: none;
+    cursor: pointer;
+    border-radius: 2px;
+
+
+
+}
+
+.google-btn .google-icon-wrapper{
+
+   position: absolute;
+   margin-top: 1px;
+   margin-left: 1px;
+   background-color: rgb(255, 255, 255);
+   width: 40px;
+   height: 40px;
+   border-radius: 2px;
+   
+
+}
+.google-btn .google-icon{
+ 
+    position: absolute;
+    margin-top: 11px ;
+    margin-left: 11px;
+    width: 18px;
+    height: 18px;
+  } 
+
+.google-btn img {
+    width: 20px;
+    height: 20px;
+ 
+}
+
+.google-btn:hover {
+    
+    box-shadow: 0 0 6px  #052445;
+
+}
+
+.google-btn:active {
+    background-color: #146dcd;
+}
+.google-btn .btn-text{
+
+    float: right;
+    font-size: 14px;
+    margin:  11px 11px 0 0 ;
+    color: #ffffff;
+    letter-spacing: 0.2px;
+    font-family: "Roboto";
+
+ }

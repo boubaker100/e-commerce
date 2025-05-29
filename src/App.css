@@ -1,0 +1,27 @@
+
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+
+/* منع التمرير الأفقي */
+
+html, body {
+  overflow-x: hidden;
+}
+
+/* تأكد من أن جميع العناصر لا تخرج عن عرض الشاشة */
+* {
+  box-sizing: border-box;
+}
+
+/* لا تسمح للعناصر بالتجاوز الأفقي */
+.container, .row, .col, .section {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* اجعل الصور والوسائط لا تتجاوز العرض */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

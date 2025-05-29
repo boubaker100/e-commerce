@@ -1,0 +1,123 @@
+.top-bar {
+
+  position: fixed;
+  height: 60px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  width: -webkit-fill-available;
+
+
+
+}
+
+
+.side-bar {
+
+  position: fixed;
+  overflow-y: auto;
+  background-color: rgb(255, 255, 255);
+  z-index: 1;
+
+  height: 100vh;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  padding: 20px 0px;
+
+}
+
+.side-bar-link {
+  color: #495057;
+  font-size: 18px;
+  padding: 10px 10px 10px 15px;
+  margin: 0px 10px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+
+  font-weight: 400;
+  transition: all ease-in-out;
+
+
+}
+
+.side-bar-link:hover {
+  color: #000000;
+  background-color: #f7f7fb;
+  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  text-decoration: none;
+
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  transition: all ease-in-out;
+
+
+}
+
+.side-bar .active {
+  background-color: #f2f3fe;
+  color: #038EDC;
+  box-shadow: 5px 5px 10px 5px rgba(0, 0, 0, 0.1);
+
+  font-weight: 500;
+
+
+}
+
+.side-bar .active:hover {
+  color: #038EDC;
+  background-color: #f2f3fe;
+  transition: all ease-in-out;
+
+}
+
+a {
+
+  text-decoration: none !important;
+}
+
+
+
+
+
+.sidebar-open .top-bar {
+  position: fixed;
+  top: 3px;
+
+  margin-left: 300px;
+  /* عرض sidebar المفتوح */
+  transition: left 0.3s,width 0.3s;
+
+
+}
+
+/* الحالة المغلقة */
+.sidebar-closed .top-bar {
+  position: fixed;
+
+  left: 100px;
+  /* عرض sidebar المغلق */
+  transition: left 0.3s,
+}
+
+/* (مهم) اضبط Sidebar نفسه */
+
+
+/* تأكد أن main-content يبدأ دومًا تحت TopBar وجوار Sidebar */
+.sidebar-open .main-content {
+  margin-top: 85px;
+  margin-left: 300px;
+  transition: margin-right 0.3s;
+}
+
+.sidebar-closed .main-content {
+  margin-top: 85px;
+  margin-left: 100px;
+  transition: margin-left 0.3s;
+}

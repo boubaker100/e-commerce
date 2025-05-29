@@ -1,0 +1,53 @@
+.form{
+    
+
+    background-image: linear-gradient(90deg,
+    white 0%,
+    white 50%,
+    transparent 50%
+
+    ) ,url("../../../sebastian-unrau-sp-p7uuT0tw-unsplash.jpg");
+ background-position:center;
+ background-size: cover;
+ background-repeat: no-repeat;
+ width: 100%;
+ height: 30rem;
+ box-shadow: 0 0 20px rgba(0, 0,0, 0.7);
+  padding: 30px;
+ 
+}
+.form-custom{
+    width: 50%
+
+}
+.form-custom{
+    margin-bottom: 20px;
+    position: relative;
+    
+}
+.form-custom label,
+.form-custom input{
+    display:  block;
+}
+.form-custom input{
+    padding: 15px 15px;
+    outline: none;
+    border-width: 1px;
+    border-radius: 6px;
+     background-color: rgba(224, 236, 230, 0.381);
+    width: 80%;
+    font-family: 'Lato',sans-serif;
+}
+.form-custom:focus:valid{
+    border-color: green ;
+
+}
+.form-custom:focus:not(:valid){
+
+    border-color: red;
+}
+
+
+
+
+
