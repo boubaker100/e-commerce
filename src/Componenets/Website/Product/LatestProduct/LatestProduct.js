@@ -13,7 +13,7 @@ export default function LatestProduct() {
         Axios.get(`/${Latest}`).then((res) => {
             setProducts(res.data)
         }).finally(() => {
-            setLoading(false); // يجب أن تكون false وليس true
+            setLoading(false); 
         })
     }, [])
 
@@ -21,7 +21,9 @@ export default function LatestProduct() {
         <Product key={product.id}
             title={product.title}
             description={product.description}
-            image={product.images?.[0]?.image || 'https://via.placeholder.com/300x400'}
+            image={Array.isArray(product.images) && product.images[0]?.image
+            ? product.images[0].image
+            : 'https://picsum.photos/seed/7/640/480'}         
             sale={product.sale}
             price={product.price}
             discount={product.discount}
