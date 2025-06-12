@@ -12,6 +12,7 @@ export default function LatestProduct() {
     React.useEffect(() => {
         Axios.get(`/${Latest}`).then((res) => {
             setProducts(res.data)
+            
         }).finally(() => {
             setLoading(false); 
         })
@@ -21,7 +22,7 @@ export default function LatestProduct() {
         <Product key={product.id}
             title={product.title}
             description={product.description}
-            image={Array.isArray(product.images) && product.images[0]?.image
+            image={product.images?.[0]?.image
             ? product.images[0].image
             : 'https://picsum.photos/seed/7/640/480'}         
             sale={product.sale}

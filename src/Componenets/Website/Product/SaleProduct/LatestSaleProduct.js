@@ -1,4 +1,4 @@
-import React from 'react'
+import { useEffect, useState } from 'react'
 import { LatestSale } from '../../../../Api/Api';
 import { Axios } from '../../../../Api/Axios';
 import Product from './CardProduct';
@@ -6,11 +6,11 @@ import SkeletonFunction from '../../../../helpers/SkeletonFunction';
 
 export default function LatestSaleProduct() {
 
-    const [loading, setLoading] = React.useState(true);
-    const [products, setProducts] = React.useState([])
+    const [loading, setLoading] = useState(true);
+    const [products, setProducts] =useState([])
     console.log(products);
 
-    React.useEffect(() => {
+   useEffect(() => {
 
         Axios.get(`/${LatestSale}`).then((res) => {
 

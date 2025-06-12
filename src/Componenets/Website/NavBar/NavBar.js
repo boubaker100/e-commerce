@@ -20,7 +20,7 @@ export default function NavBar() {
   const [quantity, setQuantity] = useState(1);
 
   const { IsChange } = useContext(Cart);
-  console.log(IsChange);
+  console.log(product);
 
 
 
@@ -33,6 +33,7 @@ export default function NavBar() {
       .then((res) => {
 
         setCategories(res.data.slice(-8));
+        console.log(res.data.slice(-8));
 
       }).finally(() => {
         setLoading(false);
