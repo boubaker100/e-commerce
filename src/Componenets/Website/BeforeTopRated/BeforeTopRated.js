@@ -5,8 +5,9 @@ import { Link } from 'react-router-dom';
 const BeforeTopRated = () => {
     return (
         <>
-            <div className='my-5 pc'>
-                <div style={{ left: '70%',top:'30%' }} className='position-absolute text-white text-center mt-5  ' >
+            <div className=' my-5 pc'>
+                <div style={{ left: '70%',top:'30%' }} className='laptops position-absolute text-white text-center mt-5  ' >
+                  
                     <h1 >Laptops</h1>
                     <p className='text-center  text-white'>Acer , Dell , HP ,toshiba , Lenovo ..ext</p>
                     <Link to='/shop'

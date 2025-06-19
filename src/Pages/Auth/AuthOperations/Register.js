@@ -73,10 +73,10 @@ async function handleSubmit(e){
        return (
     <> 
     {loading && <Loading/> }
-    <div className='container'>
+    <div className='container '>
      
-     <div className='row' style={{height:"100vh"}}>
-     <Form  className='form' onSubmit={handleSubmit}>
+    
+     <Form  className='form my-4' onSubmit={handleSubmit}>
      <div className='form-custom'>
      <h1>LOGIN</h1>
    
@@ -160,7 +160,7 @@ async function handleSubmit(e){
       </div>
      
       </Form>
-      </div>
+     
       </div>
            
        </>

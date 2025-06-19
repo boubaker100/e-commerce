@@ -24,7 +24,7 @@ const SingleProduct = () => {
     React.useEffect(() => {
         Axios.get(`/${Product}/${id}`).then((res) => {
             console.log(res.data);
-            setImage(res.data[0].images.map((img) => { return { original: img.image, thumbnail: img.image } }));
+            setImage(res.data[0].Images.map((img) => { return { original: img.image, thumbnail: img.image } }));
             setProducts(res.data[0]);
 
         }).finally(() => {

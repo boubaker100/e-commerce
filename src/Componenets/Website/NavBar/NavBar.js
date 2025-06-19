@@ -56,9 +56,9 @@ export default function NavBar() {
   const categoriesShow = categories.map((category) => (
 
     <Link to={`/categories/${category.id}`}
-      className="text-decoration-none text-black">
-      <div  >
-        {FunctionSlice(category.title, 8)}
+      className="text-decoration-none fw-bold text-black">
+      <div>
+        {category.title}
       </div>
     </Link>
   ));
@@ -204,17 +204,17 @@ const changeQuantity= (id,btn)=>{
         </div>
       ) : (
         <nav className="navbar navbar-light bg-light mt-3">
-          <div className="container-fluid d-flex flex-wrap align-items-center justify-content-start gap-3">
+          <div className=" container-fluid d-flex flex-wrap align-items-center  gap-3">
 
 
-            <div className="d-flex flex-wrap align-items-center gap-3">
+            <div className="  d-flex flex-wrap align-items-center gap-5">
               {categoriesShow}
             </div>
 
 
-            <div className=" mt-lg-2 ">
-              <Link className=" text-decoration-none text-dark" to="/categories">
-                Show All
+            <div className="  d-flex btn  p-0">
+              <Link className="fw-bold bg-primary text-decoration-none m-0 text-white p-2" to="/categories">
+                Show All categories
               </Link>
             </div>
           </div>

@@ -7,14 +7,15 @@ import SkeletonFunction from '../../../../helpers/SkeletonFunction';
 export default function LatestSaleProduct() {
 
     const [loading, setLoading] = useState(true);
-    const [products, setProducts] =useState([])
-    console.log(products);
+    const [products, setProducts] =useState([]);
+   console.log(products);
 
    useEffect(() => {
 
         Axios.get(`/${LatestSale}`).then((res) => {
 
             setProducts(res.data)
+            
 
         }).finally(() => {
             setLoading(false);
@@ -23,11 +24,11 @@ export default function LatestSaleProduct() {
 
     }, [])
     const productsShow = products.map((product) =>
-
+       
         <Product key={product.id}
             title={product.title}
             description={product.description}
-            image={product.images[0].image}
+            image={product.images} 
             sale={product.sale}
             price={product.price}
             discount={product.discount}

@@ -75,7 +75,7 @@ async function handleSubmit(e){
      <div className='container'>
      
       <div className='row' style={{height:"100vh"}}>
-      <Form  className='form' onSubmit={handleSubmit}>
+      <Form  className='form ' onSubmit={handleSubmit}>
      <div className='form-custom'>
       <h1>LOGIN</h1>
     
@@ -91,10 +91,11 @@ async function handleSubmit(e){
         type="email"
         name="email"
         ref={focus}
+        required
         placeholder="name@example.com" 
         />
         
-        required
+      
         
       </Form.Group>
 
@@ -119,7 +120,7 @@ async function handleSubmit(e){
      
        <button className='btn btn-primary' type='submit'>Login</button>
       <div  className='google-btn' >
-        <a href={`http://127.0.0.1:8000/login-google`}>
+        <a href={`https://e-commece-back-end-vwjl.onrender.com/login-google`}>
         <div className='google-icon-wrapper'>
           <img  
           className='google-icon'
@@ -128,7 +129,7 @@ async function handleSubmit(e){
           />
           </div>
          
-          <p className='btn-text'>
+          <p className='btn-text '>
             <b>Sign in with google</b>
           </p>
        

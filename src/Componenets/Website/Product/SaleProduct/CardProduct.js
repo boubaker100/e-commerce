@@ -22,20 +22,27 @@ export default function Product(props) {
     return (
 
 
-        <Card style={{ width: '18rem' }}>
+        <Card style={{textAlign:"center", width: '18rem' }}>
 
             <NavLink as={Link} to={`/product/${props.id}`} className=' text-decoration-none text-black'>
 
                 <Card.Body>
-                    <Card.Title className='fw-bold text-truncate'
+                    <Card.Title className='fw-bold mb-3 '
                     >{props.title}</Card.Title>
-                    <span style={{ width: 60, height: 60, borderRadius: 50, }}
+                  {props.sale && 
+                 ( <p 
+                    style={{ width: 60, height: 60, borderRadius: 50, }}
                         className="tw-bold position-relative text-center d-flex justify-content-center align-items-center  badge rounded-pill bg-danger">
-                        Sale!
-                    </span>
+                        sale
+                    </p>
+                )}
                     <Card.Img style={{ width: 170, height: 170 }}
-                        className='img-fluid rounded mx-auto d-block' src={props.image} />
-                    <Card.Text>
+                        className='img-fluid rounded mx-auto d-block mb-3 ' 
+                    src={props.image && props.image.length > 0 ? props.image[0].image : 'https://picsum.photos/seed/74/640/480'}
+
+                        
+                        />
+                    <Card.Text style={{ height: '50px', overflow: 'hidden' }} >
                         {props.description}
                     </Card.Text>
 

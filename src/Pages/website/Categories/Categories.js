@@ -12,12 +12,12 @@ import SkeletonFunction from '../../../helpers/SkeletonFunction';
 export default function WebsiteCategories() {
     const [categories, setCategories] = useState([]);
     const [loading, setLoading] = useState(true);
-
+    console.log(categories);
     useEffect(() => {
         Axios.get(`/${CAT}`)
             .then((res) => {
                 setCategories(res.data);
-                console.log(res.data);
+                console.log(res.data.image[1]);
             }).finally(() => {
                 setLoading(false);
             })
@@ -27,12 +27,14 @@ export default function WebsiteCategories() {
     }, []);
 
     const categoriesShow = categories.map((item, index) => {
-        return (
-
-
-            <div key={index} className='col-lg-1 col-md-6 col-12 bg-transparent border-0' >
+      
+   return (
+         
+           
+  
+            <div key={index} className='col-lg-4 col-md-6 col-12 bg-transparent border-0' >
                 <div className=' m-1 gap-2 h-100 col-2 py-3 rounded d-flex align-items-center justify-content-center'>
-                    <img width={50} src={item.image} alt="Logo" />
+                    <img width={800} hieght={800} src={item.image} alt="Logo" />
                     <p className='text-center'>
                         {FunctionSlice(item.title, 8)}
                     </p>
