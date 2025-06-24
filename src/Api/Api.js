@@ -1,4 +1,8 @@
-export const baseURL = 'https://e-commece-back-end-vwjl.onrender.com/api/';
+//export const baseURL = 'https://e-commece-back-end-vwjl.onrender.com/api';
+export const baseURL = 'https://e-commece-back-end-vmsj.onrender.com/api';
+;
+
+export const REGISTER = "register";
 
 //AUTH
 export const LOGIN = "login";
