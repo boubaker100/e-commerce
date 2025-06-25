@@ -1,5 +1,5 @@
 //export const baseURL = 'https://e-commece-back-end-vwjl.onrender.com/api';
-export const baseURL = 'https://e-commece-back-end-vmsj.onrender.com/api';
+export const baseURL = process.env.REACT_PUBLIC_API_URL;
 ;
 
 export const REGISTER = "register";
