@@ -34,7 +34,7 @@ function App() {
           <Route path='/' element={<HomePage />} />
         </Route>
         <Route element={<RequireBack />}>
-          <Route path='/login' element={<Login />} />
+          <Route path='/login' element={<Login/>} />
           <Route path='/register' element={<Register />} />
         </Route>
         <Route path='/auth/google/callback' element={<GoogleCallBack />} />

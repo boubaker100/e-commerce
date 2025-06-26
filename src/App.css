@@ -29,3 +29,6 @@ img, video, iframe {
   height: auto;
   display: block;
 }
+.dropdown-toggle::after {
+    display: none !important;
+}

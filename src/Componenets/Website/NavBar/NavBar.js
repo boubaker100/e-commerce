@@ -6,12 +6,11 @@ import FunctionSlice from '../../../helpers/FunctionSlice';
 import SkeletonFunction from '../../../helpers/SkeletonFunction';
 import Modal from 'react-bootstrap/Modal';
 import { Cart } from '../../../Context/CartChangerContext';
-import { Container, Form, Button } from "react-bootstrap";
+import { Container, Form, Button, Dropdown, NavDropdown } from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import QuantityCounter from '../Btns/QuantityCounter';
-
-
+import userImg from "../../../Assets/user.png";
 export default function NavBar() {
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true)
@@ -145,8 +144,8 @@ const changeQuantity= (id,btn)=>{
 
 
       <nav className="py-3 bg-light">
-        <Container>
-          <div className="d-flex flex-wrap align-items-center justify-content-between">
+       
+          <div className="d-flex flex-wrap align-items-center justify-content-between mx-5">
 
             {/* الشعار */}
             <div className="col-12 col-md-3 mb-3 mb-md-0 d-flex justify-content-center justify-content-md-start">
@@ -189,13 +188,29 @@ const changeQuantity= (id,btn)=>{
               </div>
 
               {/* أيقونة المستخدم */}
-              <Link to="/">
-                <img width={40} src={require("../../../Assets/user.png")} alt="User" />
-              </Link>
+
+
+
+             
+       <Dropdown>
+      <Dropdown.Toggle style={{ cursor: "pointer" }} as="div" arrow={false} variant="" id="dropdown-basic">
+     <img width={40} src={userImg} alt="Cart" />
+      </Dropdown.Toggle>
+
+      <Dropdown.Menu>
+  
+        <Dropdown.Item href="/login">Login</Dropdown.Item>
+        <Dropdown.Item href="/register">Register</Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
+              
+
+
+
             </div>
 
           </div>
-        </Container>
+     
       </nav>
 
       {loading ? (
@@ -213,7 +228,8 @@ const changeQuantity= (id,btn)=>{
 
 
             <div className="  d-flex btn  p-0">
-              <Link className="fw-bold bg-primary text-decoration-none m-0 text-white p-2" to="/categories">
+              <Link className="fw-bold bg-primary text-decoration-none m-0 text-white p-2"
+                to="/categories">
                 Show All categories
               </Link>
             </div>
