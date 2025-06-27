@@ -18,10 +18,10 @@ export default function NavBar() {
   const [show, setShow] = useState(false);
   const [quantity, setQuantity] = useState(1);
 
-  const { IsChange } = useContext(Cart);
+  const { IsChange } = useContext(Cart); 
   console.log(product);
 
-console.log("Triggering Vercel Production Deploy");
+console.log("Triggering Vercel Production Deploy !");
 
 
   const handleClose = () => setShow(false);
