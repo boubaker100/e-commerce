@@ -21,6 +21,7 @@ export default function NavBar() {
   const { IsChange } = useContext(Cart);
   console.log(product);
 
+console.log("Triggering Vercel Production Deploy");
 
 
   const handleClose = () => setShow(false);
