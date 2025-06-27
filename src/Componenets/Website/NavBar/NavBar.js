@@ -192,17 +192,20 @@ const changeQuantity= (id,btn)=>{
 
 
              
-       <Dropdown>
-      <Dropdown.Toggle style={{ cursor: "pointer" }} as="div" arrow={false} variant="" id="dropdown-basic">
-     <img width={40} src={userImg} alt="Cart" />
-      </Dropdown.Toggle>
+  <Dropdown>
+  <Dropdown.Toggle style={{ cursor: "pointer" }} as="div" arrow={false} variant="" id="dropdown-basic">
+    <img width={40} src={userImg} alt="Cart" />
+  </Dropdown.Toggle>
 
-      <Dropdown.Menu>
-  
-        <Dropdown.Item href="/login">Login</Dropdown.Item>
-        <Dropdown.Item href="/register">Register</Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown>
+  <Dropdown.Menu>
+    <Dropdown.Item as={Link} to="/login">
+      Login
+    </Dropdown.Item>
+    <Dropdown.Item as={Link} to="/register">
+      Register
+    </Dropdown.Item>
+  </Dropdown.Menu>
+</Dropdown>
               
 
 
